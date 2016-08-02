@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/8 | Mello&#39;s Blog</title>
+  <title>tap和click | Mello&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,117 +191,54 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>This is Mello's Blog.Welcome.<br></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>Let's Start Now.</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/02/tap和click/">tap和click</a></h4>
-                            
-                            <p><time datetime="2016-08-02T03:07:50.000Z"><a href="/2016/08/02/tap和click/">2016-08-02</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/02/countdown/">countdown</a></h4>
-                            
-                            <p><time datetime="2016-08-02T03:01:20.000Z"><a href="/2016/08/02/countdown/">2016-08-02</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/02/mario/">mario</a></h4>
-                            
-                            <p><time datetime="2016-08-02T01:52:01.000Z"><a href="/2016/08/02/mario/">2016-08-02</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/02/localStorage/">localStorage</a></h4>
-                            
-                            <p><time datetime="2016-08-02T01:39:28.000Z"><a href="/2016/08/02/localStorage/">2016-08-02</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/01/everyone/">everyone</a></h4>
-                            
-                            <p><time datetime="2016-08-01T05:58:42.000Z"><a href="/2016/08/01/everyone/">2016-08-01</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/01/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2016-08-01T05:27:20.880Z"><a href="/2016/08/01/hello-world/">2016-08-01</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-08-02T03:07:50.000Z" itemprop="datePublished">
+          2016-08-02
+      </time>
+    
+</span>
+                <h1>tap和click</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>在移动端，click会有200~300ms的延迟，所以用tap代替click。</p>
+<p>tap的点击穿透事件<br>使用pointer-events:none<br>元素不再是鼠标事件的目标，鼠标不再监听当前层而去监听下面的层中的元素。但是如果它的子元素设置了pointer-events为其它值，比如auto，鼠标还是会监听这个子元素的。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#closePopup'</span>).on(<span class="string">'tap'</span>, function(e)&#123;</div><div class="line">    $(<span class="string">'#popupLayer'</span>).hide();</div><div class="line">    $(<span class="string">'#bgMask'</span>).hide();</div><div class="line"></div><div class="line">    $(<span class="string">'#underLayer'</span>).css(<span class="string">'pointer-events'</span>, <span class="string">'none'</span>);</div><div class="line"></div><div class="line">    setTimeout(function()&#123;</div><div class="line">        $(<span class="string">'#underLayer'</span>).css(<span class="string">'pointer-events'</span>, <span class="string">'auto'</span>);</div><div class="line">    &#125;, <span class="number">400</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>To Be Continue...</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/08/02/countdown/">
+        countdown →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/08/02/tap和click/" data-title="tap和click" data-url="http://yoursite.com/2016/08/02/tap和click/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
